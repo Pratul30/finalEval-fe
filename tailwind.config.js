@@ -10,6 +10,8 @@ module.exports = {
       white: '#FFFFFF',
       'purple-100': '#8C61FF',
       'purple-200': '#653EFF',
+      'logo-bar': '#5905CE',
+      'content-page': '#EBEEFE',
     }
   },	
   plugins: [],

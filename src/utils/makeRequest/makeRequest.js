@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { AUTH_URL } from '../../constants/authEndPoints';
-axios.defaults.headers.common['authorization'] = 'Bearer QWlzaHdhcnlhIE4=';
 
 const makeAuthRequest = async (
   apiEndPoint,
