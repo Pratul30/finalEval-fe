@@ -43,7 +43,7 @@ function ContentTypeBodyRight({contentTypesObj}) {
   console.log('fieldArr', fieldArr);
 
   return (
-    <div className='flex flex-col m-3 w-full'>
+    <div className='flex flex-col p-5 w-full'>
       <div className='font-montserrat font-light'>{
         fieldArr.length
       } fields

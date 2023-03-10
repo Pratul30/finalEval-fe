@@ -4,7 +4,7 @@ import ContentTypeSideNavbarBody from '../ContentTypeSideNavbarBody';
 
 function ContentTypeSideNavbar({contentTypes, setcontentTypesObj}) {
   return (
-    <div className='basis-1/4 bg-content-side-navbar'>
+    <div className='basis-1/2 bg-content-side-navbar'>
       <ContentTypeSideNavbarBody contentTypes={contentTypes} setcontentTypesObj={setcontentTypesObj} />
     </div>
   );

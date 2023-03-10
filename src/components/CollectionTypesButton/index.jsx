@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import search from '../../assets/icons/icon-search-dark.png';
 
 function CollectionTypesButton({setIsContentTypesLoaded}) {
   return (
-    <button onClick={()=>setIsContentTypesLoaded(false)} className='text-white m-2 mt-5 font-montserrat text-xs'>
+    <div className='flex justify-between items-center'>
+      <button onClick={()=>setIsContentTypesLoaded(false)} className='text-white m-3 mt-5 font-montserrat text-md font-bold'>
       COLLECTION TYPES
-    </button>
+      </button>
+      <img src={search} className='object-contain m-3' />
+    </div>
   );
 }
 

@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewTypeButton from '../NewTypeButton';
 import ContentTypeButton from '../ContentTypeButton';
+import search from '../../assets/icons/icon-search-dark.png';
 
 function ContentTypeSideNavbarBody({contentTypes, setcontentTypesObj}) {
 
   return (
-    <div className='flex flex-col m-3'>
+    <div className='flex flex-col m-6'>
       {
-        <div>
+        <div className='flex justify-between mb-2 font-light'>
           {
             contentTypes.length
-          } types
+          } Types
+          <img src={search} />
         </div>
       } 
       <NewTypeButton />

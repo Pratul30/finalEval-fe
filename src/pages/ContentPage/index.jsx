@@ -9,27 +9,30 @@ import CollectionBody from '../../components/CollectionBody';
 function ContentPage() {
 
   const [contentTypes, setContentTypes] = useState([{}]);
-  const [isContentTypesLoaded, setIsContentTypesLoaded] = useState(true);
+  const [isContentTypesLoaded, setIsContentTypesLoaded] = useState(false);
+  const [selectedId, setSelectedId] = useState('');
 
   useEffect(() => {
     makeBackendRequest(GET_ALL_CONTENT_TYPE).then(
       (response) => {
         Promise.resolve(response).then(() => {
           setContentTypes(response);
+          setIsContentTypesLoaded(false);
+          console.log('selectedId from parent',selectedId);
           console.log(response);
         });
       }
     );
-  }, []);
+  }, [selectedId]);
 
   return (
     <div className='flex flex-row min-h-screen bg-content-page font-montserrat'>
-      <SideNavbar contentTypes = {contentTypes} setIsContentTypesLoaded={setIsContentTypesLoaded} />
+      <SideNavbar contentTypes = {contentTypes} selectedId={selectedId} setIsContentTypesLoaded={setIsContentTypesLoaded} setSelectedId={setSelectedId} />
       <div className='flex flex-col w-full bg-content-page text-black'>
         <ContentTypesBar />
 
         {isContentTypesLoaded && <ContentTypeBody contentTypes = {contentTypes} />}
-        {!isContentTypesLoaded && <CollectionBody />}
+        {!isContentTypesLoaded && <CollectionBody selectedId={selectedId} />}
         
       </div>   
     </div>

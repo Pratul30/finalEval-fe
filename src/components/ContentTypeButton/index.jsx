@@ -29,7 +29,7 @@ function ContentTypeButton({contentType, setcontentTypesObj}) {
   };
 
   return (
-    <button onClick={handleContentTypeArr} className='flex bg-white m-1 p-2 rounded-md justify-between text-sm'>
+    <button onClick={handleContentTypeArr} className='flex bg-white m-1 py-5 px-3 rounded-md justify-between text-sm'>
       {
         <div>
           {

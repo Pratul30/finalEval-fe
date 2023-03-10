@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 
 function ContentTypeBuilderButton({setIsContentTypesLoaded}) {
   return (
-    <button onClick={()=>setIsContentTypesLoaded(true)} className='text-white text-xs mt-3 bg-black font-bold pl-2 p-1'>
+    <button onClick={()=>setIsContentTypesLoaded(true)} className='flex text-white text-md font-bold mt-3 pl-2 p-1'>
+      <div>
       CONTENT TYPE BUILDER
+      </div>
+  
     </button>
   );
 }
