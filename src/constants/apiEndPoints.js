@@ -20,7 +20,7 @@ export const CREATE_CONTENT_TYPE = {
   method: 'post'
 };
 
-export const CREATE_FIELD = (id) => ({
-  url: `fields/${id}`,
+export const UPDATE_FIELD = (id) => ({
+  url: `fields/update/${id}`,
   method: 'post'
 });
