@@ -42,7 +42,7 @@ function NewTypeButton() {
 
   return (
     <div className='flex'>
-      <button onClick={()=> setIsOpen(true)} className='bg-new-type-button flex-1 text-selected-type border-2 rounded-lg border-selected-type p-3'>+ New Type</button>
+      <button onClick={()=> setIsOpen(true)} className='bg-new-type-button flex-1 text-selected-type border-2 border-dotted rounded-lg border-selected-type p-3'>+ New Type</button>
       <Modal style={customStyles} isOpen={modalIsOpen} onRequestClose={()=> setIsOpen(false)}>
         <h1>Create a new content type</h1>
         <label>Name of the content type</label><br />

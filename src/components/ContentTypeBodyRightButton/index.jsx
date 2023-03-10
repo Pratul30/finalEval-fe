@@ -37,17 +37,15 @@ function ContentTypeBodyRightButton({fieldArr, setFieldArr}) {
   console.log(modalIsOpen);
 
   return (
-    <div>
-      <button onClick={()=>setIsOpen(true)}>Add new Field
-        <Modal style={customStyles} isOpen={modalIsOpen} onRequestClose={()=> setIsOpen(false)} ariaHideApp={false}>
-          <h1>Create a new field</h1>
-          <label>Name of the field</label><br />
-          <input onChange={handleInputChange} className='border-2 border-new-type-button'></input><br />
-          <button onClick={()=>setIsOpen(false)}>Cancel</button>
-          <button onClick={createNewField}>Create</button>
-        </Modal>
-      </button>
-    </div>
+    <button className='border-2 border-dotted border-selected-type rounded-md p-3 text-selected-type' onClick={()=>setIsOpen(true)}>Add new Field
+      <Modal style={customStyles} isOpen={modalIsOpen} onRequestClose={()=> setIsOpen(false)} ariaHideApp={false}>
+        <h1>Create a new field</h1>
+        <label>Name of the field</label><br />
+        <input onChange={handleInputChange} className='border-2 border-new-type-button'></input><br />
+        <button onClick={()=>setIsOpen(false)}>Cancel</button>
+        <button onClick={createNewField}>Create</button>
+      </Modal>
+    </button>
   );
 }
 

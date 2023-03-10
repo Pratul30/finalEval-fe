@@ -15,6 +15,8 @@ module.exports = {
       'content-side-navbar': '#D4D6E5',
       'new-type-button': '#E9EAF2',
       'selected-type': '#5905CE',
+      'ab': '#6188F9',
+      'sidebar': '#232323'
     }
   },	
   plugins: [],

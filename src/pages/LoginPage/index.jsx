@@ -5,7 +5,7 @@ import './login.css';
 
 function Login() {
   return (
-    <div className='loginPage flex'>
+    <div className='loginPage flex font-montserrat'>
       <LoginSideImage />
       <Form />
     </div>

@@ -43,17 +43,17 @@ function ContentTypeBodyRight({contentTypesObj}) {
   console.log('fieldArr', fieldArr);
 
   return (
-    <div className='m-3'>
-      <div>{
+    <div className='flex flex-col m-3 w-full'>
+      <div className='font-montserrat font-light'>{
         fieldArr.length
       } fields
       </div>
+      <ContentTypeBodyRightButton fieldArr={fieldArr} setFieldArr={setFieldArr} />
       {
         fieldArr.length > 0 &&
                 // eslint-disable-next-line react/jsx-key
                 fieldArr.map((contentType) => <ContentTypeBodyRightHeader contentType={contentType} />)
       }
-      <ContentTypeBodyRightButton fieldArr={fieldArr} setFieldArr={setFieldArr} />
     </div>
   );
 }
