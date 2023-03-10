@@ -1,5 +1,5 @@
 import React  from 'react';
-import makeAuthRequest from '../../utils/makeRequest/makeRequest';
+import {makeAuthRequest} from '../../utils/makeRequest/makeRequest';
 import { LOGIN } from '../../constants/authEndPoints';
 import { useNavigate } from 'react-router-dom';
 

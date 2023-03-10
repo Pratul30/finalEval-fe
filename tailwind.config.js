@@ -12,6 +12,9 @@ module.exports = {
       'purple-200': '#653EFF',
       'logo-bar': '#5905CE',
       'content-page': '#EBEEFE',
+      'content-side-navbar': '#D4D6E5',
+      'new-type-button': '#E9EAF2',
+      'selected-type': '#5905CE',
     }
   },	
   plugins: [],

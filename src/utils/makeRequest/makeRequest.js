@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { AUTH_URL } from '../../constants/authEndPoints';
+import { BACKEND_URL } from '../../constants/apiEndPoints';
 
 const makeAuthRequest = async (
   apiEndPoint,
@@ -12,11 +13,24 @@ const makeAuthRequest = async (
     ...dynamicConfig,
   };
   const { data } = await axios(requestDetails);
-  console.log(data);
   return data;
 };
 
-export default makeAuthRequest;
+const makeBackendRequest = async (
+  apiEndPoint,
+  dynamicConfig = {},
+) => {
+  const requestDetails = {
+    baseURL: BACKEND_URL,
+    url: apiEndPoint.url,
+    method: apiEndPoint.method,
+    ...dynamicConfig,
+  };
+  const { data } = await axios(requestDetails);
+  return data;
+};
+
+export { makeAuthRequest, makeBackendRequest };
 
 
 
